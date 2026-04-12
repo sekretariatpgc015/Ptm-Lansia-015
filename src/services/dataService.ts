@@ -76,6 +76,7 @@ export async function fetchRecapData(): Promise<LansiaData[]> {
               gds: getValue('GDS'),
               chol: getValue('CHOL'),
               au: getValue('AU'),
+              hb: getValue('HB'),
             };
           });
           resolve(mappedData);

@@ -67,6 +67,7 @@ export default function App() {
     gds: '',
     chol: '',
     au: '',
+    hb: '',
   });
 
   useEffect(() => {
@@ -328,6 +329,7 @@ export default function App() {
       gds: '',
       chol: '',
       au: '',
+      hb: '',
     });
     setSearchTerm('');
     setIsManual(false);
@@ -674,6 +676,17 @@ export default function App() {
                       className="w-full px-4 py-3 bg-stone-50 border border-stone-200 rounded-xl text-lg font-mono"
                     />
                   </div>
+                  <div className="space-y-2">
+                    <label className="text-xs font-bold text-stone-500 uppercase tracking-wider">HB (g/dL)</label>
+                    <input
+                      type="text"
+                      name="hb"
+                      placeholder="12.5"
+                      value={formData.hb}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-stone-50 border border-stone-200 rounded-xl text-lg font-mono"
+                    />
+                  </div>
                 </div>
               </div>
 
@@ -807,12 +820,13 @@ export default function App() {
                       <th className="px-4 py-3 font-bold border-b border-stone-200">GDS</th>
                       <th className="px-4 py-3 font-bold border-b border-stone-200">CHOL</th>
                       <th className="px-4 py-3 font-bold border-b border-stone-200">AU</th>
+                      <th className="px-4 py-3 font-bold border-b border-stone-200">HB</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-stone-100">
                     {recapLoading ? (
                       <tr>
-                        <td colSpan={16} className="px-4 py-12 text-center text-stone-400 italic">
+                        <td colSpan={17} className="px-4 py-12 text-center text-stone-400 italic">
                           <div className="flex flex-col items-center gap-2">
                             <RefreshCcw className="animate-spin text-rose-500" size={24} />
                             Memuat data rekapitulasi...
@@ -840,11 +854,12 @@ export default function App() {
                           <td className="px-4 py-3 text-stone-600">{item.gds}</td>
                           <td className="px-4 py-3 text-stone-600">{item.chol}</td>
                           <td className="px-4 py-3 text-stone-600">{item.au}</td>
+                          <td className="px-4 py-3 text-stone-600">{item.hb}</td>
                         </tr>
                       ))
                     ) : (
                       <tr>
-                        <td colSpan={16} className="px-4 py-12 text-center text-stone-400 italic">
+                        <td colSpan={17} className="px-4 py-12 text-center text-stone-400 italic">
                           Belum ada data pemeriksaan yang tercatat.
                         </td>
                       </tr>

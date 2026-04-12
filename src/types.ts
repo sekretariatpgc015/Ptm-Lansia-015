@@ -15,6 +15,7 @@ export interface LansiaData {
   gds: string; // Blood Sugar
   chol: string; // Cholesterol
   au: string; // Uric Acid
+  hb: string; // Hemoglobin
 }
 
 export interface MasterLansia {

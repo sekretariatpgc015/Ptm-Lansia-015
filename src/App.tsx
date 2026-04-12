@@ -340,7 +340,7 @@ export default function App() {
       <header className="mb-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div className="flex items-center gap-4">
           <img 
-            src="https://cdn.phototourl.com/uploads/2026-03-11-662d4adb-fdd7-4e41-b5d5-cf514ab18057.png" 
+            src="https://lh3.googleusercontent.com/d/1YibmCQLufPZ9t5gDx7I7JTLY4m1oymrM" 
             alt="Logo Posbindu" 
             className="h-16 w-auto object-contain"
             referrerPolicy="no-referrer"

@@ -263,8 +263,8 @@ export default function App() {
     const formattedDate = `${day}/${month}/${year}`;
     
     // Format jenis kelamin lengkap
-    const fullGender = formData.jenisKelamin === 'L' ? 'Laki-laki' : 
-                      (formData.jenisKelamin === 'P' ? 'Perempuan' : formData.jenisKelamin);
+    const fullGender = formData.jenisKelamin === 'L' ? 'LAKI-LAKI' : 
+                      (formData.jenisKelamin === 'P' ? 'PEREMPUAN' : formData.jenisKelamin);
 
     // Format tanggal lahir ke DD/MM/YYYY jika dalam format YYYY-MM-DD
     let finalTglLahir = formData.tglLahir;
@@ -537,9 +537,9 @@ export default function App() {
                       onChange={handleInputChange}
                       className="w-full px-4 py-2.5 bg-stone-50 border border-stone-200 rounded-xl appearance-none"
                     >
-                      <option value="">Pilih...</option>
-                      <option value="L">Laki-laki</option>
-                      <option value="P">Perempuan</option>
+                      <option value="">PILIH...</option>
+                      <option value="L">LAKI-LAKI</option>
+                      <option value="P">PEREMPUAN</option>
                     </select>
                   </div>
 
